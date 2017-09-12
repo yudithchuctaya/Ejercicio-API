@@ -1,0 +1,50 @@
+div #map{
+    width: 100%;
+   height: 600px;
+
+}
+ #map {
+        height: 400px;
+        width: 100%;
+       }
+       body{
+        background-size: 100%;
+        background:black; 
+       }
+       h2{
+        color: #fff;
+        text-align: center;
+       }
+       button{
+        margin: 15px auto;
+        padding: 10px 15px;
+        width: 100%;
+        height: 60px;
+        margin-top: 2px;
+        background-color:orange;
+        font-size: 30px;  
+        color:#d6e1e2;
+       }
+       button:hover{
+        background-color: #18b5bc;
+       }
+       .container{
+        width: 100%;
+        height: 70px;
+        background-color: orange;
+       }
+       .input-1{
+      padding: 20px 70px;
+      background:transparent;
+      border-radius: 10px; 
+      border-color: 2px solid #fff;
+      border-style: solid;
+       }
+        .input-2{
+      padding: 20px 70px;
+      background:transparent;
+      border-radius: 10px;
+      margin-left: 150px; 
+       border-color: 2px solid #fff;
+      border-style: solid;
+       }
