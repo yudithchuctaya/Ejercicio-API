@@ -16,20 +16,42 @@
   </head>
   <body>
 
-    <h2>My Google Maps Demo</h2>
-	    <div class="container">
-	    	
-	    <input  class="input-1" type="text" placeholder="Ingresa tu punto de partida">
-	    <input  class="input-2" type="text" placeholder="Ingresa tu Destino">
-	    </div>
-    
+  <section>	
+   <h2>My Google Maps Demo</h2>
+   	<header>
+   	   <div class="row">
+	        <div class="input-field col s6">
+	          <input placeholder="Laboratoria" id="first_name" type="text" class="validate">
+	          <label for="first_name">Ingresa tu punto de Partida</label>
+	        </div>
 
-    <div id="map"></div>
-    <button id="encuentrame" >ENCUENTRAME</button>
+	        <div class="input-field col s6">
+	          <input id="last_name" type="text" class="validate">
+	          <label for="last_name">Ingresa tu Destino</label>
+	        </div>
+      </div>
+   			
+   		
+   	</header>
+	
 
+   <div class="row">
+     <div id="map">    </div>
+   	
+   </div>
+   <div class="row">
+	  <div>
+	  	
+	  	<button class="amarillo" id="encuentrame" class="waves-effect waves-light btn-large" type="submit" name="action">ENCUENTRAME
+    <i class="material-icons right">send</i>
+  </button>
+	  </div>
+		
+	</div>
 
+  </section>
 
-
+       
 
     <!-- jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -39,6 +61,8 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFF-GlTdf7it_aJyaJJ3QjR4vcDS2ZSI&callback=initMap&libraries=places">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   
     <script src="assets/js/main.js"></script>
   </body>
