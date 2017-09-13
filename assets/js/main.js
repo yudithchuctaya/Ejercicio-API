@@ -1,83 +1,41 @@
-  function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-            });
 
-         var infoWindow = new google.maps.InfoWindow({map: map});
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-
-
-
-
-
-
-
-
- // function initMap() {
+ function initMap() {
         
- //        var map = new google.maps.Map(document.getElementById("map"), {
- //          zoom:5,
- //          center : {lat: -9.1191427, lng: -77.0349046},
- //          mapTypeControl:false,
- //          zoomControl:false,
- //          streetViewControl:false,
- //        });
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom:5,
+          center : {lat: -9.1191427, lng: -77.0349046},
+          mapTypeControl:false,
+          zoomControl:false,
+          streetViewControl:false,
+        });
 
- //        // var marker = new google.maps.Marker({
- //        //   position: uluru,
- //        //   map: map
- //        // });
+
       
- //      function buscar(){
- //      	if(navigator.geolocation){
- //      		navigator.geolocation.getCurrentPosition(funcionExito,funcionError);
- //      	}
- //      }
- //      document.getElementById("encuentrame").addEventListener("click",buscar);
- //      var latitud,longitud;
- //      var funcionExito = function(posicion) {
- //      	latitud = position.coords.latitude ;
- //      	longitud = position.coords.longitude ;
- //      var miUbicacion = new google.maps.Marker({
- //      position:{lat:latitud,lng:longitud},
- //      animation:google.maps.Animation.DROP,
- //      map:map
- //    })
- //    map.setZooom(18);
- //    map.setCenter({lat:latitud, lng:longitud});
+      
+      function buscar(){
+      	if(navigator.geolocation){
+      		 
+      		navigator.geolocation.getCurrentPosition(funcionExito,funcionError);
+      	}
+      }
 
- //    var funcionError = function(error){
- //      alert("Tenemos un problema con encontrar tu ubicación")
- //       }
-
- //    }  
- //  }
+      document.getElementById("encuentrame").addEventListener("click",buscar);
+      var latitud,longitud;
+      var funcionExito = function(posicion) {
+      	latitud = posicion.coords.latitude ;
+      	longitud = posicion.coords.longitude ;
+      var miUbicacion = new google.maps.Marker({
+      position:{lat:latitud,lng:longitud},
+      animation:google.maps.Animation.DROP,
+      map:map
+    });
+    map.setZooom(17);
+    map.setCenter({lat:latitud, lng:longitud});
+    }
+    var funcionError = function(error){
+      alert("Tenemos un problema con encontrar tu ubicación")
+       }
+   }
 
 
 
